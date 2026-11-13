@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "AvaAssistant",
+  "version": "1.0",
+  "description": "Assistente de estudos integrado ao AvaAssistant.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:8080/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}

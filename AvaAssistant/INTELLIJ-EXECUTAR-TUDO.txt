@@ -1,0 +1,31 @@
+AVAAssistant - EXECUTAR TUDO PELO INTELLIJ
+
+1) Abra a pasta que contém este pom.xml no IntelliJ IDEA.
+2) Aguarde o Maven importar e baixar as dependências.
+3) Configure o Project SDK como JDK 21:
+   File > Project Structure > Project > SDK > 21.
+4) Confirme que o Ollama está instalado e que o modelo existe:
+   ollama list
+   Deve aparecer gemma3:4b.
+   Se não aparecer, execute uma única vez: ollama pull gemma3:4b
+5) Confirme que o Tesseract está instalado em:
+   C:\Program Files\Tesseract-OCR\tesseract.exe
+   e que por.traineddata e eng.traineddata estão em tessdata.
+6) No seletor de configurações do IntelliJ, escolha:
+   AvaAssistant (tudo junto)
+7) Clique no botão verde Run.
+
+O inicializador faz automaticamente:
+- inicia o Ollama se ele ainda não estiver respondendo em localhost:11434;
+- verifica se gemma3:4b está instalado;
+- inicia o backend Spring Boot na porta 8080;
+- abre a interface JavaFX.
+
+Para encerrar, feche a janela do AvaAssistant. O Spring Boot será encerrado.
+Se o próprio AvaAssistant iniciou o processo ollama serve, ele também será encerrado.
+Se o Ollama já estava aberto antes, ele permanece em execução.
+
+IMPORTANTE:
+- Esta configuração é para DESENVOLVIMENTO pelo IntelliJ, não é o instalador final.
+- Na primeira execução, Ollama, Gemma 3 4B e Tesseract ainda precisam estar instalados no Windows.
+- Se a porta 8080 já estiver ocupada, encerre o outro processo que a estiver usando.

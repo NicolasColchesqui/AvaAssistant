@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>AvaAssistant</title>
+
+    <style>
+        body {
+            width: 480px;
+            min-height: 250px;
+            max-height: 550px;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+
+        h2 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #status {
+            margin-top: 18px;
+            padding: 15px;
+            background-color: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 14px;
+            line-height: 1.7;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+            max-height: 350px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+
+<body>
+<h2>AvaAssistant</h2>
+<p>Assistente de estudos</p>
+
+<button id="lerPagina">Ler página atual</button>
+
+<div id="status">Aguardando leitura...</div>
+
+<script src="popup.js"></script>
+</body>
+</html>
